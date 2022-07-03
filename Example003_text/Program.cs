@@ -22,3 +22,6 @@ string Replase(string text, char oldValue, char newValue) // длина стро
 }
 string newText = Replase(text, ' ', '|');
 System.Console.WriteLine(newText);
+System.Console.WriteLine();
+newText = Replase(newText,'е', 'Е');
+System.Console.WriteLine(newText);
