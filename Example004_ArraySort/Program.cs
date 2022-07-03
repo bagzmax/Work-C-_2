@@ -1,6 +1,6 @@
 ﻿//Сортировка массива
 
-int [] arr = {1, 2, 3, 5, 5, 8, 34, 9};
+int [] arr = {8, 7, 333, 5, 55, 88, 34, 9};
 
 void PrintArray(int[] array)
 {
@@ -12,5 +12,29 @@ void PrintArray(int[] array)
     }
     Console.WriteLine();
 } 
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int maxPosition = i;
+        
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            {
+                if (array[j] > array[maxPosition]) maxPosition = j;
+            }
+        }
+
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+
+    }
+
+}
+
+PrintArray(arr);
+SelectionSort(arr);
 
 PrintArray(arr);
